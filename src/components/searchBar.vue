@@ -1,0 +1,112 @@
+<style lang="less">
+  .search{
+    width: 100%;
+    padding: 0.2rem 0.3rem;
+  }
+  .search-form {
+    position: relative;
+    height: 0.6rem;
+  }
+
+  .search-input {
+    height: 0.6rem;
+    width: 87%;
+    border-radius: 0.6rem;
+    font-size: 0.28rem;
+    text-indent: 0.6rem;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+  }
+
+  .placeholder {
+    width: 100%;
+    height: 0.6rem;
+    line-height: 0.6rem;
+    position: absolute;
+    color: #8e8e93;
+    top: 0px;
+    background-color: #fff;
+    border-radius: 0.6rem;
+    text-align: center;
+    font-size: 0.28rem;
+    >img{
+      width: 0.32rem;
+      vertical-align: middle;
+    }
+  }
+
+  .cancel-btn {
+    position: absolute;
+    right: 0;
+    height: 0.6rem;
+    line-height:  0.6rem;
+    transition: .5s ease-in;
+    font-size: 0.32rem;
+  }
+  .iconSearch{
+    position: absolute;
+    left: 0.2rem;
+    top: 0.14rem;
+    width: 0.32rem;
+  }
+  .del{
+    position: absolute;
+    right: 1.1rem;
+    top: 0.14rem;
+    width: 0.32rem;
+  }
+</style>
+<template>
+  <div class="search">
+    <form action="javascript:;" class="search-form">
+      <input type="search" class="search-input" @focus="onFocus" :placeholder="isFocus ? defaultText: ''" v-model.trim="keyword" @keydown.enter="enter">
+      <span class="cancel-btn c1" @click="cancel">取消</span>
+      <img src="../assets/img/search.png" alt="" class="iconSearch">
+      <img src="../assets/img/del.png" alt="" class="del" @click="del" v-if="keyword">
+      <div class="placeholder" @click="placeholderClick" v-if="!isFocus">
+        <img src="../assets/img/search.png" alt="" class="icon-search">
+        <span class="vm" v-show="!keyword && !isFocus" v-text="defaultText"></span>
+      </div>
+    </form>
+  </div>
+</template>
+
+<script>
+export default {
+  name: '',
+  data () {
+    return {
+      isFocus: false,
+      keyword: ''
+    }
+  },
+  props: {
+    defaultText: {
+      type: String,
+      default: '搜索'
+    }
+  },
+  methods: {
+    onFocus () {
+      this.isFocus = true
+    },
+    cancel () {
+      this.isFocus = false
+      this.keyword = ''
+      this.$emit('cancelSearch', '')
+    },
+    enter () {
+      if (!this.keyword) return
+      this.$emit('toSearch', this.keyword)
+      this.$el.querySelector('.search-input').blur()
+    },
+    placeholderClick () {
+      this.$el.querySelector('.search-input').focus()
+    },
+    del () {
+      this.keyword = ''
+    }
+  }
+}
+</script>

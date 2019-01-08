@@ -1,0 +1,57 @@
+<template>
+  <div class="mainPage">
+    <div class="list">
+      <div class="listItem" v-for="(item,index) in list" :key="index" @click="toUrl(item)">{{item.name}}</div>
+    </div>
+    <footerBar></footerBar>
+  </div>
+</template>
+
+<script>
+import footerBar from '../../components/footer'
+export default {
+  components: { footerBar },
+  data () {
+    return {
+      list: [
+        {name: '单选框', url: '/radio'},
+        {name: '下拉选择', url: '/dropDown'},
+        {name: '底部弹出', url: '/action-sheet'},
+        {name: 'button', url: '/button'},
+        {name: 'toast', url: '/toast'},
+        {name: 'dialog选择', url: '/dialog'},
+        {name: 'textarea', url: '/textarea'},
+        {name: '列表页', url: '/list'},
+        {name: '空白缺省页', url: '/error'},
+        {name: '搜索框', url: '/search'},
+        {name: '倒计时', url: '/djs'},
+        {name: '百分比圆环', url: '/progressBar'}
+      ]
+    }
+  },
+  methods: {
+    toUrl (item) {
+      this.$router.push({
+        path: item.url
+      })
+    }
+  }
+}
+</script>
+<style scoped lang="less">
+.mainPage{
+  padding-bottom:1.1rem;
+}
+.list{
+  width: 100%;
+  background-color: #fff;
+  font-size: 0.32rem;
+  .listItem{
+    width: 100%;
+    padding: 0 0.3rem;
+    height: 0.9rem;
+    line-height: 0.9rem;
+    border-bottom: 0.01rem solid #eee;
+  }
+}
+</style>
