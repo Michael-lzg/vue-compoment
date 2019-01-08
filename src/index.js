@@ -1,11 +1,19 @@
-import Vbutton from './components/button.vue'
-import Vfooter from './components/footer.vue'
+import VButton from './components/button.vue'
+import VFooter from './components/footer.vue'
 import showTip from './components/showTip'
 import dialog from './components/dialog'
+import VActionSheet from './components/actionSheet'
+import VDropDown from './components/dropDown'
+import VNoData from './components/noData'
+import VSearchBar from './components/searchBar'
 
 const vUI = {
-  Vbutton,
-  Vfooter
+  VButton,
+  VFooter,
+  VActionSheet,
+  VDropDown,
+  VNoData,
+  VSearchBar
 }
 
 const install = function (Vue, opts = {}) {

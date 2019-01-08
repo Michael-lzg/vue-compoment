@@ -1,6 +1,6 @@
 # vui
 
-> vui
+> vue-compoment
 
 ## Build Setup
 
