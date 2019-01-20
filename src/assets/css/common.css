@@ -74,7 +74,6 @@ body {
     cursor: pointer;
 }
 
-/*iconfont初始大小*/
 
 .iconfont {
     font-size: 16px;
@@ -102,7 +101,11 @@ body {
 }
 
 .bgc1 {
-    background-color: #1890ff ;
+    background-color: #1890ff;
+}
+
+.border1 {
+    border: 1px solid #1890ff;
 }
 
 .icon {
