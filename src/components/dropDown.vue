@@ -11,7 +11,7 @@
       <div class="listItem pr" v-for="(item,index) in list" :key="index"
            @click="toSelect(item,index)" :class="{'c1': selectIndex === index}">
         {{item[defaultProps.name]}}
-        <img src="../assets/img/gou.png" alt="" class="selected-img" v-if="selectIndex === index">
+        <i class="iconfont icon-i c1 fr" v-if="selectIndex === index"></i>
       </div>
     </div>
   </div>
@@ -117,15 +117,11 @@ export default {
       color: #555555;
       font-size: 0.32rem;
       line-height: 0.56rem;
-      padding: 0.22rem 0.9rem 0.22rem 0;
+      padding: 0.22rem 0.3rem 0.22rem 0;
       background-color: #fff;
       border-bottom: 0.01rem solid #EEEEEE;
-      .selected-img{
-        position: absolute;
-        right: 0.3rem;
-        top: 0.38rem;
-        width: 0.32rem;
-        height: 0.24rem;
+      >i{
+        font-size: 0.32rem;
       }
     }
     .listItem:last-child{

@@ -1,14 +1,16 @@
 <template>
-  <div>
     <ul>
-      <li v-for="(item,index) in items" :key='index' @click="toUrl(index)">
-        <img :src="item.img" alt="" v-if="$route.path==item.url" class="img">
-        <img :src="item.img1" alt="" v-if="$route.path!==item.url" class="img">
+      <li v-for="(item,i) in items" :key='i' class="w2" @click="toUrl(i)">
+        <svg class="icon" aria-hidden="true" v-if="$route.path==item.url">
+          <use :xlink:href="item.icon1"></use>
+        </svg>
+         <svg class="icon" aria-hidden="true" v-if="$route.path!==item.url">
+          <use :xlink:href="item.icon2"></use>
+        </svg>
         <div class="name" :class="{'c1':$route.path==item.url}">{{item.name}}</div>
       </li>
       <div class="bt1"></div>
     </ul>
-  </div>
 </template>
 
 <script>
@@ -19,33 +21,15 @@ export default {
         {
           name: '组件',
           url: '/',
-          img: require('../assets/img/on1.png'),
-          img1: require('../assets/img/off1.png')
+          icon1: '#icon-index1',
+          icon2: '#icon-index0'
         },
         {
           name: '插件',
           url: '/plugin',
-          img: require('../assets/img/on2.png'),
-          img1: require('../assets/img/off2.png')
+          icon1: '#icon-mine1',
+          icon2: '#icon-mine0'
         }
-        // {
-        //   name: '签到',
-        //   url: '/',
-        //   img: require('../assets/img/on4.png'),
-        //   img1: require('../assets/img/off4.png')
-        // },
-        // {
-        //   name: '统计',
-        //   url: '/statistics',
-        //   img: require('../assets/img/on5.png'),
-        //   img1: require('../assets/img/off5.png')
-        // },
-        // {
-        //   name: '我的',
-        //   url: '/mine',
-        //   img: require('../assets/img/on3.png'),
-        //   img1: require('../assets/img/off3.png')
-        // }
       ]
     }
   },
@@ -72,6 +56,7 @@ ul {
     font-size: 0.24rem;
     height: 1.1rem;
     width: 50%;
+    padding-top: 0.18rem;
     .img {
       width: 0.48rem;
       height: 0.48rem;
@@ -85,7 +70,8 @@ ul {
     }
   }
 }
-.cblue {
-  color: #1890ff !important;
+svg{
+  width: 0.44rem !important;
+  height: 0.44rem !important;
 }
 </style>
