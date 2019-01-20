@@ -24,7 +24,7 @@
     height: 0.6rem;
     line-height: 0.6rem;
     position: absolute;
-    color: #8e8e93;
+    color: #888888;
     top: 0px;
     background-color: #fff;
     border-radius: 0.6rem;
@@ -62,10 +62,13 @@
     <form action="javascript:;" class="search-form">
       <input type="search" class="search-input" @focus="onFocus" :placeholder="isFocus ? defaultText: ''" v-model.trim="keyword" @keydown.enter="enter">
       <span class="cancel-btn c1" @click="cancel">取消</span>
-      <img src="../assets/img/search.png" alt="" class="iconSearch">
-      <img src="../assets/img/del.png" alt="" class="del" @click="del" v-if="keyword">
+      <!-- <img src="../assets/img/search.png" alt="" class="iconSearch"> -->
+      <i class="iconfont icon-sousuo2 c8 iconSearch"></i>
+      <i class="iconfont icon-iconnormalsousuokuangquxiao c8 del"  @click="del" v-if="keyword"></i>
+      <!-- <img src="../assets/img/del.png" alt="" class="del" @click="del" v-if="keyword"> -->
       <div class="placeholder" @click="placeholderClick" v-if="!isFocus">
-        <img src="../assets/img/search.png" alt="" class="icon-search">
+        <!-- <img src="../assets/img/search.png" alt="" class="icon-search"> -->
+        <i class="iconfont icon-sousuo2 c8 icon-search"></i>
         <span class="vm" v-show="!keyword && !isFocus" v-text="defaultText"></span>
       </div>
     </form>

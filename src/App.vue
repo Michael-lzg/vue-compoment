@@ -18,6 +18,9 @@ export default {
   height: 100%;
   box-sizing: border-box;
 }
+.iconfont{
+  font-size: 0.32rem;
+}
 .dp-header .dp-item.dp-right {
   color: #597ef7 !important;
 }

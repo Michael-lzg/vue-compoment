@@ -9,7 +9,7 @@
         <div class="listItem" v-for="(item,index) in list" :key="index"
              @click="toSelect(item,index)">
           {{item[defaultProps.name]}}
-          <img src="../assets/img/gou.png" class="selected-img" v-if="item.selected === 'true'">
+          <i class="iconfont icon-i c1 fr" v-if="item.selected === 'true'"></i>
         </div>
       </div>
       <div class="cancel" @click="cancel" v-if="!multiple">取消</div>

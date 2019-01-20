@@ -87,7 +87,9 @@ body {
     height: 0;
     visibility: hidden;
 }
-
+.c8 {
+  color: #888 !important;
+}
 .c5 {
     color: #555555 !important;
 }
