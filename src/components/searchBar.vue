@@ -1,3 +1,60 @@
+<template>
+  <div class="search" :class="{'bgf':whiteBackGound}">
+    <form action="javascript:;" class="search-form">
+      <input type="search" class="search-input" :class="{'bg8':whiteBackGound}" @focus="onFocus" :placeholder="isFocus ? defaultText: ''" v-model.trim="keyword" @keydown.enter="enter">
+      <span class="cancel-btn c1" @click="cancel">取消</span>
+      <i class="iconfont icon-sousuo2 c8 iconSearch"></i>
+      <i class="iconfont icon-iconnormalsousuokuangquxiao c8 del"  @click="del" v-if="keyword"></i>
+      <div class="placeholder" :class="{'bg8':whiteBackGound}" @click="placeholderClick" v-if="!isFocus">
+        <i class="iconfont icon-sousuo2 c8 icon-search"></i>
+        <span class="vm" v-show="!keyword && !isFocus" v-text="defaultText"></span>
+      </div>
+    </form>
+  </div>
+</template>
+
+<script>
+export default {
+  name: '',
+  data () {
+    return {
+      isFocus: false,
+      keyword: ''
+    }
+  },
+  props: {
+    defaultText: {
+      type: String,
+      default: '搜索'
+    },
+    whiteBackGound: {
+      type: Boolean,
+      default: false
+    }
+  },
+  methods: {
+    onFocus () {
+      this.isFocus = true
+    },
+    cancel () {
+      this.isFocus = false
+      this.keyword = ''
+      this.$emit('cancelSearch', '')
+    },
+    enter () {
+      if (!this.keyword) return
+      this.$emit('toSearch', this.keyword)
+      this.$el.querySelector('.search-input').blur()
+    },
+    placeholderClick () {
+      this.$el.querySelector('.search-input').focus()
+    },
+    del () {
+      this.keyword = ''
+    }
+  }
+}
+</script>
 <style lang="less">
   .search{
     width: 100%;
@@ -56,60 +113,10 @@
     top: 0.14rem;
     width: 0.32rem;
   }
-</style>
-<template>
-  <div class="search">
-    <form action="javascript:;" class="search-form">
-      <input type="search" class="search-input" @focus="onFocus" :placeholder="isFocus ? defaultText: ''" v-model.trim="keyword" @keydown.enter="enter">
-      <span class="cancel-btn c1" @click="cancel">取消</span>
-      <!-- <img src="../assets/img/search.png" alt="" class="iconSearch"> -->
-      <i class="iconfont icon-sousuo2 c8 iconSearch"></i>
-      <i class="iconfont icon-iconnormalsousuokuangquxiao c8 del"  @click="del" v-if="keyword"></i>
-      <!-- <img src="../assets/img/del.png" alt="" class="del" @click="del" v-if="keyword"> -->
-      <div class="placeholder" @click="placeholderClick" v-if="!isFocus">
-        <!-- <img src="../assets/img/search.png" alt="" class="icon-search"> -->
-        <i class="iconfont icon-sousuo2 c8 icon-search"></i>
-        <span class="vm" v-show="!keyword && !isFocus" v-text="defaultText"></span>
-      </div>
-    </form>
-  </div>
-</template>
-
-<script>
-export default {
-  name: '',
-  data () {
-    return {
-      isFocus: false,
-      keyword: ''
-    }
-  },
-  props: {
-    defaultText: {
-      type: String,
-      default: '搜索'
-    }
-  },
-  methods: {
-    onFocus () {
-      this.isFocus = true
-    },
-    cancel () {
-      this.isFocus = false
-      this.keyword = ''
-      this.$emit('cancelSearch', '')
-    },
-    enter () {
-      if (!this.keyword) return
-      this.$emit('toSearch', this.keyword)
-      this.$el.querySelector('.search-input').blur()
-    },
-    placeholderClick () {
-      this.$el.querySelector('.search-input').focus()
-    },
-    del () {
-      this.keyword = ''
-    }
+  .bgf{
+    background-color: #fff !important;
   }
-}
-</script>
+  .bg8{
+    background-color: #F1F2F5 !important;
+  }
+</style>
