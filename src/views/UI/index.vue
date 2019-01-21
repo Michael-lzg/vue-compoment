@@ -14,18 +14,18 @@ export default {
   data () {
     return {
       list: [
-        {name: '单选框', url: '/radio'},
-        {name: '下拉选择', url: '/dropDown'},
-        {name: '底部弹出', url: '/action-sheet'},
+        {name: 'radio', url: '/radio'},
+        {name: 'dropDown', url: '/dropDown'},
+        {name: 'actionSheet', url: '/action-sheet'},
         {name: 'button', url: '/button'},
         {name: 'toast', url: '/toast'},
-        {name: 'dialog选择', url: '/dialog'},
+        {name: 'dialog', url: '/dialog'},
         {name: 'textarea', url: '/textarea'},
-        {name: '列表页', url: '/list'},
-        {name: '空白缺省页', url: '/error'},
-        {name: '搜索框', url: '/search'},
-        {name: '倒计时', url: '/djs'},
-        {name: '百分比圆环', url: '/progressBar'}
+        {name: 'list', url: '/list'},
+        {name: 'error', url: '/error'},
+        {name: 'search', url: '/search'}
+        // {name: '倒计时', url: '/djs'},
+        // {name: '百分比圆环', url: '/progressBar'}
       ]
     }
   },
