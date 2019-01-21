@@ -86,9 +86,9 @@ export default {
   height: 0.8rem;
   line-height: 0.8rem;
   text-align: center;
-  color: #1890FF;
+  color: #597EF7;
   margin-top: 0.2rem;
-  border: 0.01rem solid #1890FF;
+  border: 0.01rem solid #597EF7;
   border-radius: 0.08rem;
   font-size: 0.32rem;
 }

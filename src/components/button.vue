@@ -121,9 +121,9 @@ export default {
   border-radius: 0.9rem !important;
 }
 .simple {
-  border: 0.01rem solid #1890ff;
+  border: 0.01rem solid #597EF7;
   background-color: #fff !important;
-  color: #1890ff !important;
+  color: #597EF7 !important;
 }
 .o8 {
   opacity: 0.8;

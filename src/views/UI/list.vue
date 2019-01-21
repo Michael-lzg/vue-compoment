@@ -44,7 +44,6 @@ export default {
         if (this.list.length < 10) {
           document.getElementsByClassName('loading-layer')[0].style.display = 'none'
         }
-        // document.getElementsByClassName('loading-layer')[0].style.display = 'none'
         document.getElementsByClassName('pull-to-refresh-layer')[0].style.display = 'none'
       } else {
         this.params.pageNum++
@@ -78,7 +77,6 @@ export default {
 }
 .list{
   height: calc(100% - 1rem);
-  // height: 100%;
   background-color: #fff;
   position: relative;
 }

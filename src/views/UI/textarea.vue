@@ -15,7 +15,7 @@
     </div> -->
     <footer @click.stop="noLoseInput">
       <form action="javascript:;" class="pl" @submit="sendMessage">
-        <i class="icon-icon_normal_yuyinshuru2 iconfont voice-input-icon c1"></i>
+        <!-- <i class="icon-icon_normal_yuyinshuru2 iconfont voice-input-icon c1"></i> -->
         <textarea v-model.trim="content" id="chatInput" class="input-content" rows="1" @keyup.enter="sendMessage($event)" @click.stop="clickInput" @keyup="init" @blur="inputLoseBlur"></textarea>
         <img src="../../assets/img/chat-add.png" class="chat-add-icon" v-show="content.trim().length<=0" @click.stop="showBtn">
         <input type="button" class="send" v-show="content.trim().length>0" value="发送" @click.stop="sendMessage" />
@@ -42,6 +42,7 @@ export default {
       iconList: [
         { title: '照片', icon: '#icon-icon_more_zhaopian' },
         { title: '拍照', icon: '#icon-icon_more_paizhao' },
+        { title: '小视频', icon: '#icon-icon_more_xiaoshipin' },
         { title: '语音通话', icon: '#icon-icon_more_yuyintonghua' },
         { title: '视频通话', icon: '#icon-icon_more_shipintonghua' },
         { title: '会诊意见', icon: '#icon-icon_more_huizhenyijian1' }
@@ -214,13 +215,6 @@ footer {
     width: 0.6rem;
     height: 0.6rem;
   }
-  // .expression-icon {
-  //   position: absolute;
-  //   bottom: 10px;
-  //   right: 55px;
-  //   width: 30px;
-  //   height: 30px;
-  // }
   .input-content {
     padding: 0.1rem 0.2rem;
     background-color: #f1f2f5;
@@ -240,14 +234,12 @@ footer {
   position: relative;
   width: 100%;
   // padding: 10px 55px 10px 45px;
-  padding: 0.2rem 1.1rem 0.2rem 0.9rem;
+  padding: 0.2rem 1.1rem 0.2rem 0.3rem;
   font-size: 0;
 }
 .box {
-  // background-color: pink;
   width: 100%;
   height: 3.44rem;
-  // padding-top: 10px;
   .iconList {
     width: 33.3%;
     text-align: center;
@@ -261,6 +253,7 @@ footer {
     .title {
       font-size: 0.28rem;
       color: black;
+      margin-top: 0.2rem;
     }
   }
 }
@@ -277,9 +270,9 @@ footer {
   font-size: 0.32rem;
 }
 .remark{
-background-color:pink;
-height: 20rem;
-margin-top: 0.2rem;
-margin-bottom: 1.2rem;
+  background-color:#eee;
+  height: 20rem;
+  margin-top: 0.2rem;
+  margin-bottom: 1.2rem;
 }
 </style>

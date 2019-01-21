@@ -1,7 +1,7 @@
 
 <template>
   <div class="noData">
-    <img src="../assets/img/no_data.png" alt="">
+    <img :src="img" alt="">
     <div class="txt">{{txt}}</div>
   </div>
 </template>
@@ -11,6 +11,10 @@ export default {
   props: {
     txt: {
       type: String
+    },
+    img: {
+      type: String,
+      default: require('../assets/img/no_data.png')
     }
   }
 }

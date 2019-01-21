@@ -17,6 +17,7 @@ export default {
   width: 100%;
   height: 100%;
   box-sizing: border-box;
+  position: relative;
 }
 .iconfont{
   font-size: 0.32rem;

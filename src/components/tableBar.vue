@@ -42,8 +42,8 @@ export default {
   }
   .active {
     height: 0.88rem;
-    color: #1890FF;
-    border-bottom: 0.06rem solid #1890FF;
+    color: #597EF7;
+    border-bottom: 0.06rem solid #597EF7;
   }
 }
 </style>
