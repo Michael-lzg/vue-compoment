@@ -14,7 +14,7 @@ export default {
   data () {
     return {
       list: [
-        {name: 'radio', url: '/radio'},
+        // {name: 'radio', url: '/radio'},
         {name: 'dropDown', url: '/dropDown'},
         {name: 'actionSheet', url: '/action-sheet'},
         {name: 'button', url: '/button'},
