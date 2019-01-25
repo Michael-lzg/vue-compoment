@@ -6,10 +6,9 @@
         <div class="text" v-text="text" v-if="text"></div>
       </div>
       <div class="selectList">
-        <div class="listItem" v-for="(item,index) in list" :key="index"
-             @click="toSelect(item,index)">
+        <div class="listItem" v-for="(item,index) in list" :key="index" @click="toSelect(item,index)">
           {{item[defaultProps.name]}}
-          <i class="iconfont icon-i c1 fr" v-if="item.selected === 'true'"></i>
+          <i class="iconfont icon-i c1" v-if="item.selected === 'true'"></i>
         </div>
       </div>
       <div class="cancel" @click="cancel" v-if="!multiple">取消</div>
@@ -180,12 +179,12 @@ export default {
           /*overflow: hidden;*/
           /*white-space: nowrap;*/
           border-bottom: 0.01rem solid #EEEEEE;
-          .selected-img{
+          .iconfont{
             position: absolute;
             right: 0.3rem;
-            top: 0.38rem;
-            width: 0.32rem;
-            height: 0.24rem;
+            top: 0;
+            // width: 0.32rem;
+            // height: 0.24rem;
           }
         }
       }
