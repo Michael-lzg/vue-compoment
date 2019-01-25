@@ -20,7 +20,7 @@ export default {
   },
   methods: {
     comfirm1 () {
-      this.$dialog({
+      this.$dialog.show({
         title: '删除提示',
         text: '是否确定删除此标签？',
         showCancelBtn: false,
@@ -31,7 +31,7 @@ export default {
       })
     },
     comfirm2 () {
-      this.$dialog({
+      this.$dialog.show({
         title: '删除提示',
         text: '是否确定删除此标签？',
         showCancelBtn: true,
@@ -42,7 +42,7 @@ export default {
       })
     },
     feedback () {
-      this.$dialog({
+      this.$dialog.show({
         title: '请填写反馈',
         text: '辅助文本',
         type: 'input',
@@ -56,7 +56,7 @@ export default {
       })
     },
     toSelect () {
-      this.$selectDialog({
+      this.$selectDialog.show({
         title: '流程结束',
         text: '您未开启下节点处理，确定后审批流程结束，不需要下节点处理人操作！',
         showCancelBtn: true,
@@ -74,6 +74,10 @@ export default {
         }
       })
     }
+  },
+  destroyed () {
+    this.$dialog.hide()
+    this.$selectDialog.hide()
   }
 }
 </script>
