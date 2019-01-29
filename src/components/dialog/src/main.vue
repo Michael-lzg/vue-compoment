@@ -1,4 +1,5 @@
 <style lang="less" scoped>
+@import '../../../assets/css/custom.less';
   .dialog-mask {
     position: fixed;
     z-index: 999;
@@ -71,6 +72,7 @@
         color: #222222;
         border-radius: 0 0 0.16rem 0.16rem;
         background-color: white;
+        color: @kduiThemeColor;
       }
     }
   }
@@ -92,7 +94,7 @@
       <footer class="footer tc">
         <div class="my-cancel-btn dib" v-show="showCancelBtn" v-text="cancelText" @click="cancelClick">
         </div>
-        <div class="confirm-btn c1" :style="{width: showCancelBtn ? '50%' : '100%'}" v-text="confirmText"
+        <div class="confirm-btn" :style="{width: showCancelBtn ? '50%' : '100%'}" v-text="confirmText"
                 @click="confirmClick" :class="showCancelBtn ? 'dib' : ''">
         </div>
       </footer>

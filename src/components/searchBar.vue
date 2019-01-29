@@ -2,7 +2,7 @@
   <div class="search" :class="{'bgf':whiteBackGound}">
     <form action="javascript:;" class="search-form">
       <input type="search" class="search-input" :class="{'bg8':whiteBackGound}" @focus="onFocus" :placeholder="isFocus ? defaultText: ''" v-model.trim="keyword" @keydown.enter="enter">
-      <span class="cancel-btn c1" @click="cancel">取消</span>
+      <span class="cancel-btn" @click="cancel">取消</span>
       <i class="iconfont icon-sousuo2 c8 iconSearch"></i>
       <i class="iconfont icon-iconnormalsousuokuangquxiao c8 del"  @click="del" v-if="keyword"></i>
       <div class="placeholder" :class="{'bg8':whiteBackGound}" @click="placeholderClick" v-if="!isFocus">
@@ -55,7 +55,8 @@ export default {
   }
 }
 </script>
-<style lang="less">
+<style scoped lang="less">
+@import '../assets/css/custom.less';
   .search{
     width: 100%;
     padding: 0.2rem 0.3rem;
@@ -100,6 +101,7 @@ export default {
     line-height:  0.6rem;
     transition: .5s ease-in;
     font-size: 0.32rem;
+    color: @kduiThemeColor;
   }
   .iconSearch{
     position: absolute;

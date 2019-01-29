@@ -9,9 +9,9 @@
     </div>
     <div class="selectList dropDown" v-if="showList">
       <div class="listItem pr" v-for="(item,index) in list" :key="index"
-           @click="toSelect(item,index)" :class="{'c1': selectIndex === index}">
+           @click="toSelect(item,index)" :class="{'kduiThemeColor': selectIndex === index}">
         {{item[defaultProps.name]}}
-        <i class="iconfont icon-i c1 fr" v-if="selectIndex === index"></i>
+        <i class="iconfont icon-i kduiThemeColor fr" v-if="selectIndex === index"></i>
       </div>
     </div>
   </div>

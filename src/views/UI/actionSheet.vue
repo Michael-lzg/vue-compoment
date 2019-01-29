@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="title" @click="toSelect(1)">
+    <div class="title clearfix" @click="toSelect(1)">
       <span class="fl">请选择一个选择（单选）</span>
       <span class="fr">{{selectItem.name}}</span>
     </div>
@@ -87,17 +87,18 @@ export default {
 </script>
 
 <style scoped>
-.title{
-  height: 1rem;
+.title,.title-multi{
+  /* height: 1rem; */
   background-color: #fff;
   padding: 0.22rem 0.3rem;
   font-size: 0.32rem;
   line-height: 0.56rem;
+  margin-bottom: 0.2rem;
 }
-  .title-multi{
+  /* .title-multi{
     background-color: #fff;
     padding: 0.22rem 0.3rem;
     font-size: 0.32rem;
     line-height: 0.56rem;
-  }
+  } */
 </style>

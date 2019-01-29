@@ -1,4 +1,5 @@
 <style lang="less" scoped>
+@import '../../../assets/css/custom.less';
   .select-dialog-mask {
     position: fixed;
     z-index: 999;
@@ -66,6 +67,7 @@
         color: #222222;
         border-radius: 0 0 0.16rem 0.16rem;
         background-color: white;
+        color: @kduiThemeColor;
       }
     }
   }
@@ -81,13 +83,13 @@
       <article class="body tc" v-html="text" v-if="text" :class="!title ? 'change-body' : ''">
       </article>
       <div class="list-item" v-for="(item,index) in list" :key="index"
-           @click="toSelect(item,index)" :class="{'c1':item.selected === 'true'}">
+           @click="toSelect(item,index)" :class="{'kduiThemeColor':item.selected === 'true'}">
         {{item[defaultProps.name]}}
       </div>
       <footer class="footer tc">
         <div class="my-cancel-btn dib" v-show="showCancelBtn" v-text="cancelText" @click="cancelClick">
         </div>
-        <div class="confirm-btn c1" :style="{width: showCancelBtn ? '50%' : '100%'}" v-text="confirmText"
+        <div class="confirm-btn" :style="{width: showCancelBtn ? '50%' : '100%'}" v-text="confirmText"
                 @click="confirmClick" :class="showCancelBtn ? 'dib' : ''">
         </div>
       </footer>

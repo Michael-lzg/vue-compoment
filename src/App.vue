@@ -10,20 +10,22 @@ export default {
 }
 </script>
 
-<style>
+<style lang="less">
 @import './assets/css/reset.css';
 @import './assets/css/common.css';
+@import './assets/css/custom.less';
 #app {
   width: 100%;
   height: 100%;
   box-sizing: border-box;
   position: relative;
+  font-size:0.32rem;
 }
 .iconfont {
   font-size: 0.32rem;
 }
 .dp-header .dp-item.dp-right {
-  color: #597ef7 !important;
+  color: @kduiThemeColor !important;
 }
 ._v-container > ._v-content > .pull-to-refresh-layer[data-v-ecaca2b0] {
   width: 100%;

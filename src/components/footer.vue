@@ -7,7 +7,7 @@
          <svg class="icon" aria-hidden="true" v-if="$route.path!==item.url">
           <use :xlink:href="item.icon2"></use>
         </svg>
-        <div class="name" :class="{'c1':$route.path==item.url}">{{item.name}}</div>
+        <div class="name" :class="{'kduiThemeColor':$route.path==item.url}">{{item.name}}</div>
       </li>
       <div class="bt1"></div>
     </ul>

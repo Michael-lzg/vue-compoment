@@ -59,17 +59,18 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="less">
+@import '../../assets/css/custom.less';
 .list{
   padding: 0 0.3rem;
 }
 .item{
-  height: 0.8rem;
-  line-height: 0.8rem;
+  height: 0.9rem;
+  line-height: 0.9rem;
   text-align: center;
-  color: #597EF7;
+  color: @kduiThemeColor;
   margin-top: 0.2rem;
-  border: 0.01rem solid #597EF7;
+  border: 0.01rem solid @kduiThemeColor;
   border-radius: 0.08rem;
   font-size: 0.32rem;
 }

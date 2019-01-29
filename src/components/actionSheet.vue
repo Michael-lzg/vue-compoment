@@ -8,13 +8,13 @@
       <div class="selectList">
         <div class="listItem" v-for="(item,index) in list" :key="index" @click="toSelect(item,index)">
           {{item[defaultProps.name]}}
-          <i class="iconfont icon-i c1" v-if="item.selected === 'true'"></i>
+          <i class="iconfont icon-i" v-if="item.selected === 'true'"></i>
         </div>
       </div>
       <div class="cancel" @click="cancel" v-if="!multiple">取消</div>
       <div class="multiple-button-block" v-if="multiple">
         <button class="multiple-btn" @click="cancel">取消</button>
-        <button class="multiple-btn c1" @click="submit">确定</button>
+        <button class="multiple-btn" @click="submit">确定</button>
       </div>
     </div>
   </div>
@@ -129,6 +129,7 @@ export default {
 </script>
 
 <style scoped lang='less'>
+@import '../assets/css/custom.less';
   .mask{
     position: fixed;
     z-index: 999;
@@ -183,8 +184,7 @@ export default {
             position: absolute;
             right: 0.3rem;
             top: 0;
-            // width: 0.32rem;
-            // height: 0.24rem;
+            color: @kduiThemeColor;
           }
         }
       }

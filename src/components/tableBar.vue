@@ -25,6 +25,7 @@ export default {
 </script>
 
 <style scoped lang="less">
+@import '../assets/css/custom.less';
 .tabBar {
   position: fixed;
   top: 0px;
@@ -42,8 +43,8 @@ export default {
   }
   .active {
     height: 0.88rem;
-    color: #597EF7;
-    border-bottom: 0.06rem solid #597EF7;
+    color: @kduiThemeColor;
+    border-bottom: 0.06rem solid @kduiThemeColor;
   }
 }
 </style>

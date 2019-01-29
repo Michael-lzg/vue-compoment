@@ -1,15 +1,15 @@
 <template>
   <div>
     <div class="btn" :class="{'footer':isBottom}" v-if="count==1">
-      <button class="button bgc1" :class="{'o8':loading,'round':round,'simple':simple}" @click="submit" :disabled="loading">
+      <button class="button" :class="{'o8':loading,'round':round,'simple':simple}" @click="submit" :disabled="loading">
         <img src="../assets/img/ring.png" alt="" width="20" class="loading" v-if="loading && !simple">
         <img src="../assets/img/color_loading1.png" alt="" width="20" class="loading" v-if="loading && simple">
         <span>{{txt}}</span>
       </button>
     </div>
     <div class="footerBtn2" v-if="count==2">
-      <button class="btnLeft bgc1" @click="onLeft">{{leftTxt}}</button>
-      <button class="btnRight bgc1" @click="onRight">{{rightTxt}}</button>
+      <button class="btnLeft" @click="onLeft">{{leftTxt}}</button>
+      <button class="btnRight" @click="onRight">{{rightTxt}}</button>
     </div>
   </div>
 </template>
@@ -67,6 +67,7 @@ export default {
 </script>
 
 <style scoped lang="less">
+@import '../assets/css/custom.less';
 .btn {
   width: 100%;
   height: 1.3rem;
@@ -84,7 +85,7 @@ export default {
   width: 100%;
   height: 0.9rem;
   line-height: 0.9rem;
-  // background-color: #1890ff;
+  background-color: @kduiThemeColor;
   color: white;
   text-align: center;
   border-radius: 0.08rem;
@@ -108,7 +109,7 @@ export default {
     display: block;
     float: left;
     line-height: 0.9rem;
-    // background-color: #1890ff;
+    background-color: @kduiThemeColor;
     color: white;
     text-align: center;
     border-radius: 0.08rem;
@@ -121,9 +122,9 @@ export default {
   border-radius: 0.9rem !important;
 }
 .simple {
-  border: 0.01rem solid #597EF7;
+  border: 0.01rem solid @kduiThemeColor;
   background-color: #fff !important;
-  color: #597EF7 !important;
+  color: @kduiThemeColor !important;
 }
 .o8 {
   opacity: 0.8;
@@ -136,7 +137,7 @@ export default {
     transform: rotate(0);
   }
   50% {
-    transform: rotate(200deg);
+    transform: rotate(180deg);
   }
   100% {
     transform: rotate(360deg);

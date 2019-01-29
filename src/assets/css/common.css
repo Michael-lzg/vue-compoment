@@ -74,7 +74,6 @@ body {
     cursor: pointer;
 }
 
-
 .iconfont {
     font-size: 16px;
 }
@@ -87,9 +86,11 @@ body {
     height: 0;
     visibility: hidden;
 }
+
 .c8 {
-  color: #888 !important;
+    color: #888 !important;
 }
+
 .c5 {
     color: #555555 !important;
 }
@@ -160,4 +161,12 @@ body {
     top: 0;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 99;
+}
+
+.kduiThemeColor {
+    color: #597EF7 !important;
+}
+
+.kduiRed {
+    color: #f64c4c !important;
 }

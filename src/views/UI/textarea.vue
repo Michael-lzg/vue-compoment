@@ -117,6 +117,7 @@ export default {
 </script>
 
 <style scoped lang="less">
+@import '../../assets/css/custom.less';
 .mainPage {
   height: 100%;
   padding: 0.3rem;
@@ -205,7 +206,7 @@ footer {
     right: 0.3rem;
     font-size: 0.28rem;
     line-height: 0.6rem;
-    color: #597ef7;
+    color: @kduiThemeColor;
     background-color: #fff;
   }
   .chat-add-icon {
@@ -219,7 +220,7 @@ footer {
     padding: 0.1rem 0.2rem;
     background-color: #f1f2f5;
     border-radius: 032rem;
-    caret-color: #597ef7;
+    caret-color: @kduiThemeColor;
     // height: 30px;
     line-height: 0.4rem;
     color: #000000;
