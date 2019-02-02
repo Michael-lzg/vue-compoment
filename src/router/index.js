@@ -1,5 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+const requireAll = requireContext => requireContext.keys().map(requireContext)
+const req = require.context('../views/UI', false, /\.vue$/)
+console.log(requireAll(req))
+// console.log(req)
 
 Vue.use(Router)
 
