@@ -11,6 +11,7 @@
 
 <script>
 export default {
+  name: 'toast',
   data () {
     return {
       list: [

@@ -34,6 +34,7 @@
 
 <script>
 export default {
+  name: 'kTextArea',
   data () {
     return {
       content: '',

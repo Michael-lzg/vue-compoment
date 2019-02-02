@@ -15,6 +15,7 @@
 <script>
 import searchBar from '../../components/searchBar'
 export default {
+  name: 'search',
   components: {searchBar},
   data () {
     return {

@@ -10,17 +10,18 @@
 <script>
 import footerBar from '../../components/footer'
 export default {
+  name: 'index',
   components: { footerBar },
   data () {
     return {
       list: [
         // {name: 'radio', url: '/radio'},
         {name: 'dropDown', url: '/dropDown'},
-        {name: 'actionSheet', url: '/action-sheet'},
-        {name: 'button', url: '/button'},
+        {name: 'actionSheet', url: '/actionSheet'},
+        {name: 'button', url: '/kButton'},
         {name: 'toast', url: '/toast'},
         {name: 'dialog', url: '/dialog'},
-        {name: 'textarea', url: '/textarea'},
+        {name: 'textarea', url: '/kTextArea'},
         {name: 'list', url: '/list'},
         {name: 'error', url: '/error'},
         {name: 'search', url: '/search'}

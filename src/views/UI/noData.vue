@@ -13,13 +13,14 @@ import noData from '../../components/noData'
 import tableBar from '../../components/tableBar'
 import searchBar from '../../components/searchBar'
 export default {
+  name: 'empty',
   components: { noData, tableBar, searchBar },
   data () {
     return {
       activeIndex: 1,
       tabList: [
         { name: '我接收的', url: '/list' },
-        { name: '我发起的', url: '/noData' }
+        { name: '我发起的', url: '/empty' }
       ]
     }
   },

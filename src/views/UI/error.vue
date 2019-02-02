@@ -8,6 +8,7 @@
 import noData from '../../components/error'
 
 export default {
+  name: 'error',
   components: { noData }
 
 }

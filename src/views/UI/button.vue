@@ -10,6 +10,7 @@
 <script>
 import Kbutton from '../../components/button'
 export default {
+  name: 'kButton',
   components: { Kbutton },
   data () {
     return {

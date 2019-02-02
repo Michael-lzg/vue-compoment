@@ -17,13 +17,14 @@
 import tableBar from '../../components/tableBar'
 import searchBar from '../../components/searchBar'
 export default {
+  name: 'list',
   components: { tableBar, searchBar },
   data () {
     return {
       activeIndex: 0,
       tabList: [
         { name: '我接收的', url: '/list' },
-        { name: '我发起的', url: '/noData' }
+        { name: '我发起的', url: '/empty' }
       ],
       params: {
         pageNum: 0,

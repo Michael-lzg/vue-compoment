@@ -1,7 +1,7 @@
 <template>
   <div>
-    <dropDown :list="list" @selectChange="selectChange"
-              :default-props="defaultProps" :select-item="selectItem"></dropDown>
+    <k-dropDown :list="list" @selectChange="selectChange"
+              :default-props="defaultProps" :select-item="selectItem"></k-dropDown>
     <!--<div class="item">-->
       <!--<radio :list="list" @selectChange="selectChange"></radio>-->
     <!--</div>-->
@@ -15,9 +15,10 @@
 
 <script>
 // import radio from '../components/radio'
-import dropDown from '../../components/dropdown'
+import kDropDown from '../../components/dropdown'
 // import selectBox from '../components/selectBox'
 export default {
+  name: 'dropDown',
   data () {
     return {
       showSelect: false,
@@ -37,7 +38,7 @@ export default {
     }
   },
   // components: { radio, dropdown, selectBox },
-  components: { dropDown },
+  components: { kDropDown },
   methods: {
     selectChange (val) {
       alert(val[this.defaultProps.name])

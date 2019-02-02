@@ -8,18 +8,19 @@
       <div>请选择一个选择（多选）</div>
       <div>{{selectListString}}</div>
     </div>
-    <actionSheet v-if="showSelectOne" :list="list" :multiple="multiple" :default-props="defaultProps"
+    <k-actionSheet v-if="showSelectOne" :list="list" :multiple="multiple" :default-props="defaultProps"
                  :select-item="selectItem" title="这里是提示文本" text="这里是辅助提示文本"
-                 @submitSelect="submitSelect" @cancelSelect="cancelSelect"></actionSheet>
-    <actionSheet v-if="showSelectMulti" :list="list" :multiple="multiple" :default-props="defaultProps"
+                 @submitSelect="submitSelect" @cancelSelect="cancelSelect"></k-actionSheet>
+    <k-actionSheet v-if="showSelectMulti" :list="list" :multiple="multiple" :default-props="defaultProps"
                  :select-list="selectList" text="这里是辅助提示文本"
-                 @submitSelect="submitSelect" @cancelSelect="cancelSelect"></actionSheet>
+                 @submitSelect="submitSelect" @cancelSelect="cancelSelect"></k-actionSheet>
   </div>
 </template>
 
 <script>
-import actionSheet from '../../components/actionSheet'
+import kActionSheet from '../../components/actionSheet'
 export default {
+  name: 'actionSheet',
   data () {
     return {
       selectListString: '',
@@ -48,7 +49,7 @@ export default {
       ]
     }
   },
-  components: {actionSheet},
+  components: {kActionSheet},
   methods: {
     toSelect (num) {
       if (num === 1) {
