@@ -10,6 +10,7 @@
 <script>
 import footerBar from '../../components/footer'
 export default {
+  name: 'plugin',
   components: { footerBar },
   data () {
     return {

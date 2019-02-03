@@ -3,7 +3,7 @@
  * @Author: strong
  * @Date: 2018-11-26 00:17:13
  * @Last Modified by: mikey.zhaopeng
- * @Last Modified time: 2018-12-28 16:00:18
+ * @Last Modified time: 2019-02-02 14:44:46
  */
 function flex (baseFontSize, normal, fontscale) {
   const win = window
@@ -31,10 +31,10 @@ function flex (baseFontSize, normal, fontscale) {
   }
   metaEl.setAttribute('content', `width=device-width,user-scalable=no,initial-scale=${scale},maximum-scale=${scale},minimum-scale=${scale}`)
   doc.documentElement.style.fontSize = normal ? '50px' : `${_baseFontSize / 2 * dpr * _fontscale}px`
-  console.log(`${_baseFontSize / 2 * dpr * _fontscale}px`)
+  // console.log(`${_baseFontSize / 2 * dpr * _fontscale}px`)
   const currentScreenW = window.screen.availWidth || 375
   let _fontscale_ = 1
-  console.log(currentScreenW)
+  // console.log(currentScreenW)
   if (currentScreenW < 375) {
     _fontscale_ = currentScreenW / 375
     doc.documentElement.style.fontSize = normal ? '50px' : `${_baseFontSize / 2 * dpr * currentScreenW / 375}px`
