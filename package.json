@@ -1,10 +1,10 @@
 {
   "name": "kdv-ui",
-  "version": "1.0.0",
-  "description": "vui",
+  "version": "1.0.1",
+  "description": "kdv-ui",
   "author": "lzg",
   "private": false,
-  "main": "./dist/lzgui.js",
+  "main": "./dist/kdv.js",
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",

@@ -6,20 +6,22 @@ import VActionSheet from './components/actionSheet'
 import VDropDown from './components/dropDown'
 import VNoData from './components/noData'
 import VSearchBar from './components/searchBar'
+import VTableBar from './components/tableBar'
 
-const vUI = {
+const KDVUI = {
   VButton,
   VFooter,
   VActionSheet,
   VDropDown,
   VNoData,
-  VSearchBar
+  VSearchBar,
+  VTableBar
 }
 
 const install = function (Vue, opts = {}) {
   if (install.installed) return
-  Object.keys(vUI).forEach(key => {
-    Vue.component(key, vUI[key])
+  Object.keys(KDVUI).forEach(key => {
+    Vue.component(key, KDVUI[key])
   })
 
   Vue.prototype.$showTip = showTip
@@ -36,7 +38,7 @@ if (typeof window !== 'undefined' && window.Vue) {
 
 const API = {
   install,
-  ...vUI
+  ...KDVUI
 }
 
 export default API // 通过插件单独引入
