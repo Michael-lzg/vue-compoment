@@ -26,7 +26,7 @@ module.exports = {
   },
   output: {
     path: config.build.assetsRoot,
-    filename: 'lzgui.js',
+    filename: 'kdv.js',
     libraryTarget: 'umd',
     umdNamedDefine: true,
     publicPath: process.env.NODE_ENV === 'production'
