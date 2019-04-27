@@ -24,7 +24,8 @@ export default {
         {name: 'textarea', url: '/kTextArea'},
         {name: 'list', url: '/list'},
         {name: 'error', url: '/error'},
-        {name: 'search', url: '/search'}
+        {name: 'search', url: '/search'},
+        {name: 'swipeCell', url: '/swipeCell'}
         // {name: '倒计时', url: '/djs'},
         // {name: '百分比圆环', url: '/progressBar'}
       ]
